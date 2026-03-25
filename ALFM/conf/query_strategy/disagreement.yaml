@@ -1,0 +1,25 @@
+name: disagreement
+params:
+  # search space / diversity
+  subpool_size: 10000  # CIFAR100- 20K Food101 - 10K Caltech101 - 10K Caltech256 -20K DomainNetReal -30K
+  oversampling: 20  # 20 CIFAR100 and Food101 -20 and Caltech256 20 and DomainNetReal 10
+
+  # joint similarity temperature - use CLIP default
+  temperature: 0.03  # 0.03
+  calibrate_temperature: false
+
+  debug: false
+  use_teacher: true
+  # class-aware quotas from the oversampled top-K (0 disables)
+  top_per_class: 0
+
+  subpool_mode: "full" # {'full', 'random', 'none'}
+  final_diversity: "faiss" # {'faiss', 'none', 'kcenter', 'sklearn'}
+
+  target_set_size_student: 5
+  target_set_size_teacher: 3 
+
+  # These help the strategy find text embeddings saved at FEATURE_CACHE_DIR/<dataset>/<model>.hdf
+  dataset_name: ${dataset.name}
+  model_name: ${model.name}
+  teacher_model_name: "openclip_vit_g14"
