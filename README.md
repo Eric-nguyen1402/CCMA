@@ -1,6 +1,12 @@
+<div align="center">
+
 # Conformal Cross-Modal Active Learning
 
-**Accepted in CVPR Findings 2026**
+[![Paper](https://img.shields.io/badge/Paper-arXiv%3A2603.23159-B31B1B?logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2603.23159)
+
+## Accepted in CVPR Findings 2026
+
+</div>
 
 This repository contains the official implementation of **Conformal Cross-Modal Active Learning**, a novel approach that leverages cross-modal consistency and conformal prediction to improve active learning with vision foundation models.
 
